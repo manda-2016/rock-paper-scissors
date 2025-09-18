@@ -74,16 +74,16 @@ function playGame () {
     console.log("Round 4");
      playRound(getHumanChoice(), getComputerChoice());
 
-    console.log("Round 5");
+   console.log("Round 5");
      playRound(getHumanChoice(), getComputerChoice());
 
-     console.log("Game Over! Final Score!");
-     
+    console.log("Game Over Final Score:" + " " + "you:" + humanScore + " " + "computer:" + computerScore);
+
      if (humanScore > computerScore) {
         console.log("You won the game!")
 
      } else {
-        console.log("You lost! Reload page to try again.)
+        console.log("You lost! Reload page to try again.")
         } 
 
 }
