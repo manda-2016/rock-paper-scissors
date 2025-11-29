@@ -70,25 +70,21 @@ function playGame(event) {
   const humanChoice = event.target.id;
   console.log("human choice, in the playgame function", humanChoice);
 
-  if (round > 4) {
-    if (humanScore > computerScore) {
-      console.log("You won the game!");
-      gameMessage.textContent = "You won the game! Click Start game to play again!";
-    } else if (humanScore < computerScore) {
-      console.log("You lost! Click start game to play again!");
-      gameMessage.textContent = "You lost! Click start game to play again!";
-    } else if (humanScore === computerScore) {
-      console.log("It's a tie!");
-      gameMessage.textContent = "It's a tie! Click start game to play again!";
-    }
-   
-  }
 
-
-  if (round <= 4) {
+  if (computerScore || humanScore != 5) {
     playRound(humanChoice, getComputerChoice());
     round++;
     roundNumber.textContent = `Round: ${round}`;
+  } if (computerScore === 5) {
+    rockButton.disabled = true;
+    scissorsButton.disabled = true;
+    paperButton.disabled = true;
+    gameMessage.textContent = "You lost! Click start game to play again!";
+  } if ( humanScore === 5) {
+    gameMessage.textContent = "You won the game! Click Start game to play again!";
+    rockButton.disabled = true;
+    scissorsButton.disabled = true;
+    paperButton.disabled = true;
   }
 }
 
