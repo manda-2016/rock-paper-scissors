@@ -79,9 +79,9 @@ function playGame(event) {
     rockButton.disabled = true;
     scissorsButton.disabled = true;
     paperButton.disabled = true;
-    gameMessage.textContent = "You lost! Click start game to play again!";
+    gameMessage.textContent = "You lost! Click Start Over to play again!";
   } if ( humanScore === 5) {
-    gameMessage.textContent = "You won the game! Click Start game to play again!";
+    gameMessage.textContent = "You won the game! Click Start Over to play again!";
     rockButton.disabled = true;
     scissorsButton.disabled = true;
     paperButton.disabled = true;
