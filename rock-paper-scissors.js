@@ -53,6 +53,8 @@ newGame.addEventListener("click", (event) => {
   compScore.textContent = `Computer Score: ${computerScore}` ;
   humScore.textContent = `Human Score: ${humanScore}`;
   roundNumber.textContent = `Round: ${round}`;
+  humanSelection.textContent = `You Selected: ${humanChoice}`;
+  computerSelection.textContent = `Computer Selected:` ;
 });
 
 function getComputerChoice() {
