@@ -45,6 +45,9 @@ newGame.addEventListener("click", (event) => {
   computerScore = 0;
   round = 0;
   humanChoice = "";
+  rockButton.disabled = false;
+  scissorsButton.disabled = false;
+  paperButton.disabled = false;
 
   gameMessage.textContent = "";
   compScore.textContent = `Computer Score: ${computerScore}` ;
